@@ -585,6 +585,21 @@ do
 end
 
 -- ============================================================
+-- GIT DIFF VIEWER
+-- diffview.nvim - tabbed diffs, merge conflict tool, and file history
+-- ============================================================
+do
+  -- Single-tabpage interface for cycling through diffs, plus a git file
+  -- history viewer. Depends on plenary.nvim (already installed for Telescope);
+  -- it's listed first here so the dependency is explicit and order-safe.
+  vim.pack.add {
+    gh 'nvim-lua/plenary.nvim',
+    gh 'sindrets/diffview.nvim',
+  }
+  require('diffview').setup()
+end
+
+-- ============================================================
 -- SECTION 6: LSP
 -- LSP keymaps, server configuration, Mason tools installations
 -- ============================================================
